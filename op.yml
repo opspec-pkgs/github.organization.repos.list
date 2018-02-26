@@ -1,0 +1,28 @@
+name: github.com/opspec-pkgs/github.organization.repos.list
+description: lists repos of a github organization
+icon: /icon.svg
+version: 1.0.0
+inputs:
+  accessToken:
+    string:
+      constraints: { minLength: 1 }
+      description: access token to authenticate with; see https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+      isSecret: true
+  org:
+    string:
+      constraints: { minLength: 1 }
+      description: name of org
+outputs:
+  repos:
+    array:
+      description: list of repos of the github organization
+run:
+  container:
+    image: { ref: 'opspecpkgs/github.organization.repos.list:1.0.0' }
+    cmd: [node, /cmd.js]
+    files:
+      /cmd.js:
+      /repos: $(repos)
+    envVars:
+      org:
+      accessToken:
