@@ -21,7 +21,7 @@ async function paginate (call) {
   return data
 }
 
-paginate(() => octokit.repos.getAll({org: process.env.org}))
+paginate(() => octokit.repos.getForOrg({org: process.env.org}))
   .then(data => {
     fs.writeFileSync('/repos', JSON.stringify(data));
   }).catch(err => {
