@@ -1,6 +1,5 @@
 name: github.com/opspec-pkgs/github.organization.repos.list
 description: lists repos of a github organization
-icon: /icon.svg
 version: 1.0.0
 inputs:
   accessToken:

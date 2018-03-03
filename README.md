@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/github.organization.repos.list.svg?branch=master)](https://travis-ci.org/opspec-pkgs/github.organization.repos.list)
 
-<img src="icon.svg" alt="icon" style="height: 10vw">
+<img src="icon.svg" alt="icon" height="100px">
 
 # Problem statement
 
@@ -28,11 +28,11 @@ opctl run github.com/opspec-pkgs/github.organization.repos.list#1.0.0
 
 ```yaml
 op:
-pkg: { ref: github.com/opspec-pkgs/github.organization.repos.list#1.0.0 }
-inputs:
+  pkg: { ref: github.com/opspec-pkgs/github.organization.repos.list#1.0.0 }
+  inputs:
     accessToken:
     org:
-outputs:
+  outputs:
     repos:
 ```
 
