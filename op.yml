@@ -1,6 +1,5 @@
 name: github.com/opspec-pkgs/github.organization.repos.list
 description: lists repos of a github organization
-version: 1.0.0
 inputs:
   accessToken:
     string:
@@ -15,6 +14,7 @@ outputs:
   repos:
     array:
       description: list of repos of the github organization
+version: 1.0.0
 run:
   container:
     image: { ref: 'opspecpkgs/github.organization.repos.list:1.0.0' }
